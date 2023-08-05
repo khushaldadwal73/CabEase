@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;1,600&family=Work+Sans:wght@100&display=swap');
+
+
+:root{
+--orange:#ffa500;
+}
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    margin:0 ; padding:0;
+    box-sizing:border-box;
+    text-transform:capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--orange);
+    color:#fff;
+}
+
+html{
+    font-size:62.5%;
+   
+}
+section{
+    padding: 2rem 9%;
+}
+header{
+    position:absolute;
+    top:0; left:0; right:0;
+    background-color:#333;
+    z-index:1000;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+}
+
+header .logo{
+    font-size:2.5rem;
+    font-weight:bolder;
+    color:#fff;
+    text-transform: uppercase;
+
+}
+
+header .logo span{
+    color:var(--orange)
+}
+
+header .navbar a{
+    color:#fff;
+    font-size:2rem;
+    margin: .8rem;
+}
+
+header .navbar a:hover{
+    color:#ffa500;
+    border-radius: 5px;
+}
+
+#menu-bar {
+    color:#fff;
+    border: 1rem solid #fff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+  background-image:url('images/Capture.png') ;
+  background-size:cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  }
+
+ .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--orange);
+    color:#fff;
+    padding:.2rem 3rem;
+    border: 2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+.home .content{
+    text-align: center;
+
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0.3rem .5rem rgba(0,0, 0,.1);
+
+}
+
+.home .content p{
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0.3rem .5rem rgba(0,0, 0,.1);
+
+}
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+.heading span{
+    font-size: 3.5rem;
+    background-color: rgba(255,165,0,.2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+
+}
+.heading .space{
+    background: none;
+}
+.book .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.book .row .image{
+    flex:1 1 40rem;
+} 
+
+.book .row .image img{
+    width:100%;
+
+} 
+
+ .book .row form{
+  flex: 1 1 40rem;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0, 0,.1);
+  border-radius: .5rem;
+}
+
+.book .row form .inputBox{
+    padding:.5rem 0;
+
+}
+
+.book .row form .inputBox input{
+    width:100%;
+    padding:1rem;
+    border:.1px solid burlywood;
+    border-radius: 7px;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+
+
+.book .row form .inputBox textarea{
+    width:100%;
+    padding:1rem;
+    border:.1px solid burlywood;
+    border-radius: 7px;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+
+.book .row form .inputBox h3{
+    font-size: 1.8rem;
+    color:#666;
+
+}
+.packages .images{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+   
+ 
+}
+
+.packages .box-container{
+    height:360px;
+    width: 300px;
+    margin: 3rem;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow:0 1rem 2rem rgba(0,0, 0,.1);
+   
+
+}
+.packages .box-container .box{
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+}
+.packages .box-container .content{
+    height: 40%;
+    width: 80%;
+    margin-top: 1rem;
+    font-size: 1 rem;
+    margin-left: 1rem;
+    color: var(--orange);
+}
+.packages .box-container .h2{
+    font-size: 2rem;
+}
+.packages .box-container .btn{
+    font-size: 1rem;
+}
+.services .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.services .box-container .box{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.services .box-container .box i{
+    padding: 1rem;
+    font-size: 6rem;
+    color: var(--orange);
+}
+
+.services .box-container .box h3{
+    font-size: 2.5rem;
+    color: #666;
+}
+
+.services .box-container .box p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.services .box-container .box:hover{
+    box-shadow:0 1rem 2rem rgba(0,0, 0,.1);
+}
+
+
+ 
+ .enquiry form{
+    width: 100%;
+    box-shadow:0 1rem 2rem rgba(0,0, 0,.1);
+ }
+
+ .enquiry form input, .enquiry form textarea{
+   background-color: #f7f7f7;
+   border-radius: .4rem;
+   width: 50%;
+   margin-top: 3rem;
+   margin-left: 2rem;
+   font-size: 2rem;
+   padding: 1rem;
+ }
+
+.footer{
+    background: #333;
+
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap:wrap ;
+    gap:1.5rem;
+}
+
+.footer .box-container .box{
+    padding:1rem 0;
+    flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    color: #eee;
+
+}
+.footer .box-container .box p{
+    color: #eee;
+    font-size: 1.5rem;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    color: #eee;
+    
+}
+
+.footer .box-container .box  a:hover{
+
+    color:var(--orange);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top:.1rem solid rgba(255, 255, 255, .2) ;
+}
+
+.footer .credit span{
+
+    color: var(--orange);
+}
+body{
+    height: 300rem;
+}
+
+/* media queries */
+
+@media(max-width:1200px){
+    
+html{
+    font-size:55%;
+}
+
+}
+
+@media (max-width:991px) {
+    header{
+        padding:2rem;
+    }
+    section{
+        padding:2rem;
+    }
+    
+
+}
+
+@media (max-width:600px) {
+    
+
+   header .navbar{
+    position:absolute;
+    top:100%; right:0; left:0;
+    background-color: #333;
+    border-top:.1rem solid rgba(255,255,255,.2);
+    padding:1rem 2rem; 
+    
+     }
+
+    
+    header .navbar a{
+
+        font-size: 1rem;
+        border-radius: .5rem;
+        padding: .5em;
+        margin:1rem 0;
+        background-color: #222;
+    }
+  
+}
+
+@media(max-width:450px){
+    
+    html{
+        font-size:50%;
+    }
+    .heading span{
+        font-size: 2.5rem;
+    }
+    .enquiry form input, .enquiry form textarea{
+        width: 100%;
+    }
+
+}
