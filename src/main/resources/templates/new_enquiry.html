@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="../static/images/dot.png" type="image/x-icon">
+    <title>
+        CabEase
+    </title>
+    <link rel="stylesheet" href="../css/style.css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+</head>
+<body>
+
+<section class="enquiry" id="enquiry">
+
+    <h1 class="heading">
+        <span>e</span>
+        <span>n</span>
+        <span>q</span>
+        <span>u</span>
+        <span>i</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <!--            <div class = "row">-->
+    <!--                <div class = "col-lg-3">-->
+    <!--                    <a th:href = "@{/enquiry/new}" class = "btn btn-primary btn-sm mb-3"> Book Now</a>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <form th:action="@{/enquiry}" th:object="${enquiry}" method="POST" modelAttribute="enquiry">
+
+        <div class="inputbox">
+            <input type="text"
+                   placeholder="name"
+                   name="name"
+                   th:field = "*{name}">
+            <input type="text"
+                   placeholder="Email"
+                   name="Email"
+                   th:field = "*{Email}">
+        </div>
+        <div class="inputbox">
+            <input type="number"
+                   placeholder="how_many"
+                   name="how_many"
+                   th:field = "*{how_many}">
+            <input type="text"
+                   placeholder="Subject"
+                   name="Subject"
+                   th:field = "*{Subject}">
+        </div>
+
+        <textarea placeholder="message" name="" id="" cols="30" rows="10" ></textarea>
+        <input type="submit" class="btn" value="send message" style="background-color: var(--orange);">
+
+
+    </form>
+
+</section>
+</body>
+</html>
