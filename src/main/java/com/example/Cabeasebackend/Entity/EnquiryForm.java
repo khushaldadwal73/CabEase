@@ -1,15 +1,13 @@
 package com.example.Cabeasebackend.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document
 @Data
  public class EnquiryForm {
     @Id
-    @GeneratedValue
     private Long Customer_Id;
 
     private String name;
