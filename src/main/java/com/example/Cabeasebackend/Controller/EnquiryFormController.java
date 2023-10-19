@@ -8,7 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+
 @Controller
+@RestController
 public class EnquiryFormController {
 
     @Autowired
@@ -20,7 +22,7 @@ public class EnquiryFormController {
     public String getIndex(Model model ){
         model.addAttribute("enquiry",new EnquiryForm());
 
-        return "index";
+        return "enquiry";
     }
 
     @GetMapping("/enquiry/new")
@@ -30,7 +32,7 @@ public class EnquiryFormController {
         return "new_enquiry";
     }
 
-    @PostMapping("/enquiry")
+    @PostMapping("enquiry")
     public String newEnquiry(@ModelAttribute("enquiry") EnquiryForm enquiryForm)
     {
         enquiryFormService.postEnquiry(enquiryForm);

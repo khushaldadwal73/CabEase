@@ -7,7 +7,7 @@
     <title>
        CabEase
     </title>
-    <link rel="stylesheet" href="..//static/css/style.css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="../css/style.css" th:href="@{/css/style.css}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
     rel="stylesheet"
@@ -19,17 +19,15 @@
 <header>
 
  
-    <a href="enquiry" class="logo"><span>C</span>AB<span>E</span>ase</a>
-
-
+    <a class="logo"><span>C</span>AB<span>E</span>ase</a>
 
     <nav class="navbar">
-        <a href="#home"><i class="fa-solid fa-house"></i>&nbsp;home</a>
-        <a href="#book"><i class="fa-solid fa-book"></i>&nbsp;book</a>
-        <a href="#packages"><i class="fa-solid fa-briefcase"></i>&nbsp;packages</a>
-        <a href="#services"><i class="fa-brands fa-servicestack"></i>&nbsp;services</a>
-        <a href="#review"><i class="fa-solid fa-pen-nib"></i>&nbsp;review</a>
-        <a href="#enquiry"><i class="fa-solid fa-envelope"></i></i>&nbsp;enquiry</a>
+        <a href="#home">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#review">review</a>
+        <a href="#enquiry">enquiry</a>
     </nav>
    
 </header>
@@ -37,16 +35,17 @@
 
                        <!-- home section starts -->
 <section class="home" id="home">
-    
+
     <div class="content">
         <h3>Travel is the ultimate inspiration.</h3>
         <p>book CabEase-best cab to travel new places with us</p>
         <a th:href="@{/enquiry/new}" class="btn">Book now</a>
+
         <!--            <div class = "row">-->
         <!--                <div class = "col-lg-3">-->
         <!--                    <a th:href = "@{/enquiry/new}" class = "btn btn-primary btn-sm mb-3"> Book Now</a>-->
         <!--                </div>-->
-        <!--            </div>-->
+                    </div>
     </div>
 
 
@@ -68,37 +67,37 @@
    
     <div class="row">
         <div class="image">
-            <img src="../static/images/picktime.svg" alt="">
+            <img src="../images/picktime.svg" alt="">
         </div>
     
-        <form action="" id="bookform">
+        <form th:action="@{/book}" th:object="${book}" method="POST" modelAttribute="book">
             <div class="inputBox">
                 <h3>Name</h3>
-                <input type="text" placeholder="your name">
+                <input type="text" placeholder="your name" th:field = "*{name}">
             </div>
             <div class="inputBox">
                 <h3>Contact no.</h3>
-                <input type="text" placeholder="your mobile no">
+                <input type="text" placeholder="your mobile no"th:field = "*{Contact_no}">
             </div>
             <div class="inputBox">
                 <h3>E-mail</h3>
-                <input type="text" placeholder="your e-mail">
+                <input type="text" placeholder="your e-mail"th:field = "*{Email}">
             </div>
             <div class="inputBox">
                 <h3>Tour itinerary</h3>
-                <textarea placeholder="write your tour itinerary here, must add your pickup address"></textarea>
+                <textarea placeholder="write your tour itinerary here, must add your pickup address"th:field = "*{Tour_Iternary}"></textarea>
             </div>
             <div class="inputBox">
                 <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
+                <input type="number" placeholder="number of guests"th:field = "*{How_many}">
             </div>
             <div class="inputBox">
                 <h3>arrivals</h3>
-                <input type="date">
+                <input type="date"th:field = "*{Arrivals}">
             </div>
             <div class="inputBox">
                 <h3>leaving</h3>
-                <input type="date">
+                <input type="date" th:field="*{Leaving}">
             </div>
             <input type="submit" class="btn" value="book now ">
         </form>
@@ -137,7 +136,7 @@
            
     <div class="images">
         <div class="box-container" >
-            <div class="box" style="background-image: url(../static/images/dal-lake.jpeg);">
+            <div class="box" style="background-image: url(images/dal-lake.jpeg);">
             
                 </div>
     
@@ -157,7 +156,7 @@
         </div>
         
         <div class="box-container" >
-            <div class="box" style="background-image: url(../static/images/garez.jpeg);">
+            <div class="box" style="background-image: url(images/garez.jpeg);">
             </div>
                 <div class="content">
                     <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Gurez Valley</h2>
@@ -179,7 +178,7 @@
       
         
         <div class="box-container" >
-          <div class="box" style="background-image: url(../static/images/leh.jpeg)">
+          <div class="box" style="background-image: url(images/leh.jpeg)">
             </div>
             <div class="content">
                 <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Leh</h2>
@@ -200,7 +199,7 @@
         
            
         <div class="box-container" >
-         <div class="box" style="background-image: url(../static/images/manali1.jpeg)">
+         <div class="box" style="background-image: url(images/manali1.jpeg)">
             </div>
             <div class="content">
                 <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Manali</h2>
@@ -219,7 +218,7 @@
         </div>
             
        <div class="box-container" >
-        <div class="box" style="background-image: url(../static/images/khajjjiar.jpeg)">
+        <div class="box" style="background-image: url(images/khajjjiar.jpeg)">
         </div>
             <div class="content">
                 <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Khajjiar</h2>
@@ -238,7 +237,7 @@
        </div>
        
     <div class="box-container" >
-       <div class="box" style="background-image: url(../static/images/meclo.jpeg)">
+       <div class="box" style="background-image: url(images/meclo.jpeg)">
        </div> 
         <div class="content">
         <h2><i class="fas fa-map-marker-alt">&nbsp;</i>McLeod Ganj</h2>
@@ -373,13 +372,21 @@
                    placeholder="how_many"
                    name="how_many"
                    th:field = "*{how_many}">
+
             <input type="text"
                    placeholder="Subject"
                    name="Subject"
                    th:field = "*{Subject}">
         </div>
         
-            <textarea placeholder="message" name="" id="" cols="30" rows="10" ></textarea>
+            <textarea
+                    placeholder="message"
+                    name=""
+                    id=""
+                    cols="30" rows="10"
+                    th:field="*{Message}">
+
+            </textarea>
             <input type="submit" class="btn" value="send message" style="background-color: var(--orange);">
         
 
