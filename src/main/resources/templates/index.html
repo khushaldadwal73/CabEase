@@ -69,35 +69,35 @@
         <div class="image">
             <img src="../images/picktime.svg" alt="">
         </div>
-    
-        <form th:action="@{/book}" th:object="${book}" method="POST" modelAttribute="book">
+
+        <form action="" id="bookform">
             <div class="inputBox">
                 <h3>Name</h3>
-                <input type="text" placeholder="your name" th:field = "*{name}">
+                <input type="text" placeholder="your name" >
             </div>
             <div class="inputBox">
                 <h3>Contact no.</h3>
-                <input type="text" placeholder="your mobile no"th:field = "*{Contact_no}">
+                <input type="text" placeholder="your mobile no" >
             </div>
             <div class="inputBox">
                 <h3>E-mail</h3>
-                <input type="text" placeholder="your e-mail"th:field = "*{Email}">
+                <input type="text" placeholder="your e-mail" >
             </div>
             <div class="inputBox">
                 <h3>Tour itinerary</h3>
-                <textarea placeholder="write your tour itinerary here, must add your pickup address"th:field = "*{Tour_Iternary}"></textarea>
+                <textarea placeholder="write your tour itinerary here, must add your pickup address" ></textarea>
             </div>
             <div class="inputBox">
                 <h3>how many</h3>
-                <input type="number" placeholder="number of guests"th:field = "*{How_many}">
+                <input type="number" placeholder="number of guests" >
             </div>
             <div class="inputBox">
                 <h3>arrivals</h3>
-                <input type="date"th:field = "*{Arrivals}">
+                <input type="date" >
             </div>
             <div class="inputBox">
                 <h3>leaving</h3>
-                <input type="date" th:field="*{Leaving}">
+                <input type="date" >
             </div>
             <input type="submit" class="btn" value="book now ">
         </form>

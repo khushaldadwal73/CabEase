@@ -10,7 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-@RestController
 public class EnquiryFormController {
 
     @Autowired
@@ -22,7 +21,7 @@ public class EnquiryFormController {
     public String getIndex(Model model ){
         model.addAttribute("enquiry",new EnquiryForm());
 
-        return "enquiry";
+        return "index";
     }
 
     @GetMapping("/enquiry/new")
