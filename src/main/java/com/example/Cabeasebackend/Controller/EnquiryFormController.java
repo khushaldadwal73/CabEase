@@ -17,25 +17,18 @@ public class EnquiryFormController {
 
 
 
-    @GetMapping("/enquiry")
+    @GetMapping("")
     public String getIndex(Model model ){
         model.addAttribute("enquiry",new EnquiryForm());
 
         return "index";
     }
 
-    @GetMapping("/enquiry/new")
-    public String createEnquiry(Model model){
-        EnquiryForm enquiry= new EnquiryForm();
-        model.addAttribute("enquiry", enquiry);
-        return "new_enquiry";
-    }
-
-    @PostMapping("enquiry")
+    @PostMapping("/enquiry")
     public String newEnquiry(@ModelAttribute("enquiry") EnquiryForm enquiryForm)
     {
         enquiryFormService.postEnquiry(enquiryForm);
-        return "redirect:/enquiry";
+        return "redirect:/";
     }
 
 }

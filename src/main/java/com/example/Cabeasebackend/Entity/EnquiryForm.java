@@ -1,18 +1,22 @@
 package com.example.Cabeasebackend.Entity;
 
-import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
 @Data
  public class EnquiryForm {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Customer_Id;
 
     private String name;
 
     private String Email;
+
+    private double phoneNumber;
 
     private int how_many;
 
