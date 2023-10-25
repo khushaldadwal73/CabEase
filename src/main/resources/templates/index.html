@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,10 +36,23 @@
                        <!-- home section starts -->
 <section class="home" id="home">
 
+    <div id="messageDiv" style="background-color: yellow; color: red; font-size: 24px; text-align: center; padding: 10px display: none;">
+        <p th:text="${session.message}"></p>
+    </div>
+    <script>
+              function showMessage() {
+                var messageDiv = document.getElementById('messageDiv');
+                messageDiv.style.display = 'block';
+                setTimeout(function() {
+                   messageDiv.style.display = 'none';
+                }, 1000); // Hide the message after 5 seconds (adjust as needed)
+               }
+            </script>
+
     <div class="content">
         <h3>Travel is the ultimate inspiration.</h3>
         <p>book CabEase-best cab to travel new places with us</p>
-        <a th:href="@{/enquiry/new}" class="btn">Book now</a>
+        <a href="#book" class="btn">Book now</a>
 
         <!--            <div class = "row">-->
         <!--                <div class = "col-lg-3">-->
@@ -387,11 +400,12 @@
                     th:field="*{Message}">
 
             </textarea>
-            <input type="submit" class="btn" value="send message" style="background-color: var(--orange);">
-        
+
+            <input id="sendButton" type="submit" class="btn" value="send message" style="background-color: var(--orange);" onclick="showMessage()">
 
        </form>
-       
+
+
         </section>
 
  <!-- enquiry section ends -->
@@ -465,6 +479,6 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-                       <script src="../static/script.js"></script>
+                       <script src="../js/script.js"></script>
 </body>
 </html>
