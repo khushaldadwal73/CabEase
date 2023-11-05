@@ -18,10 +18,4 @@ public class EnquiryFormService {
       return enquiryFormRepository.save(enquiryForm);
     }
 
-    public List<EnquiryForm> getEnquiry()
-    {
-        return enquiryFormRepository.findAll();
-    }
-
-
 }
