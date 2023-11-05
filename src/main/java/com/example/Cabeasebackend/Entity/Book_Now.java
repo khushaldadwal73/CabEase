@@ -4,17 +4,21 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="enquiry")
+@Document(collection="book_now")
 @Data
- public class EnquiryForm {
-
+public class Book_Now {
     private String name;
+
+    private String Contact_no;
 
     private String Email;
 
-    private int how_many;
+    private String tour_iternary;
 
-    private String Subject;
+    private int How_many;
 
-    private String Message;
+    private String Arrivals;
+
+    private String Leaving;
+
 }
