@@ -22,12 +22,12 @@
     <a class="logo"><span>C</span>AB<span>E</span>ase</a>
 
     <nav class="navbar">
-        <a href="#home"><i class="fa-solid fa-house">&nbsp;</i>home</a>
-        <a href="#book"><i class="fa-solid fa-book">&nbsp;</i>book</a>
-        <a href="#packages"><i class="fa-solid fa-cube">&nbsp;</i>packages</a>
-        <a href="#services"><i class="fa-brands fa-servicestack">&nbsp;</i>services</a>
-        <a th:href="@{/review}"><i class="fa-solid fa-thumbs-up">&nbsp;</i>review</a>
-        <a href="#enquiry"><i class="fa-solid fa-envelope">&nbsp;</i>enquiry</a>
+        <a href="#home">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#review">review</a>
+        <a href="#enquiry">enquiry</a>
     </nav>
    
 </header>
@@ -36,24 +36,10 @@
                        <!-- home section starts -->
 <section class="home" id="home">
 
-<!--    <div id="messageDiv" style="background-color: yellow; color: red; font-size: 24px; text-align: center; padding: 10px display: none;">-->
-<!--        <p th:text="${session.message}"></p>-->
-<!--    </div>-->
-<!--    <script>-->
-<!--              function showMessage() {-->
-<!--                var messageDiv = document.getElementById('messageDiv');-->
-<!--                messageDiv.style.display = 'block';-->
-<!--                setTimeout(function() {-->
-<!--                   messageDiv.style.display = 'none';-->
-<!--                }, 1000); // Hide the message after 5 seconds (adjust as needed)-->
-<!--               }-->
-
-<!--            </script>-->
-
     <div class="content">
         <h3>Travel is the ultimate inspiration.</h3>
         <p>book CabEase-best cab to travel new places with us</p>
-        <a href="#book" class="btn">Book now</a>
+        <a th:href="@{/enquiry/new}" class="btn">Book now</a>
 
         <!--            <div class = "row">-->
         <!--                <div class = "col-lg-3">-->
@@ -69,7 +55,7 @@
 <!-- book section starts -->
 <section class="book" id="book">
     <h1 class="heading">
-        <span >b</span>
+        <span>b</span>
         <span>o</span>
         <span>o</span>
         <span>k</span>
@@ -84,14 +70,14 @@
             <img src="../images/picktime.svg" alt="">
         </div>
 
-        <form th:action="@{/postbooking}" th:object="${booking}" method="POST" modelAttribute="booking">
+        <form action="" id="bookform">
             <div class="inputBox">
                 <h3>Name</h3>
                 <input type="text" placeholder="your name" >
             </div>
             <div class="inputBox">
                 <h3>Contact no.</h3>
-                <input type="text" placeholder="your mobile no">
+                <input type="text" placeholder="your mobile no" >
             </div>
             <div class="inputBox">
                 <h3>E-mail</h3>
@@ -107,11 +93,11 @@
             </div>
             <div class="inputBox">
                 <h3>arrivals</h3>
-                <input type="date"  >
+                <input type="date" >
             </div>
             <div class="inputBox">
                 <h3>leaving</h3>
-                <input type="date"  >
+                <input type="date" >
             </div>
             <input type="submit" class="btn" value="book now ">
         </form>
