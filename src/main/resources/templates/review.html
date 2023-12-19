@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/dot.png" type="image/x-icon">
+    <title>
+        CabEase
+    </title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <style>
+        body{
+          min-height:30vh;
+          display:flex;
+          flex-direction:column;
+        }
+
+        footer{
+            margin-top:auto;
+        }
+    </style>
+</head>
+<body>
+<!-- header section starts -->
+<header>
+
+
+    <a class="logo"><span>C</span>AB<span>E</span>ase</a>
+
+    <nav class="navbar">
+        <a th:href="@{/enquiry}"><i class="fa-solid fa-house">&nbsp;</i>home</a>
+        <a href="enquiry#book"><i class="fa-solid fa-book">&nbsp;</i>book</a>
+        <a href="enquiry#packages"><i class="fa-solid fa-cube">&nbsp;</i>packages</a>
+        <a href="enquiry#services"><i class="fa-brands fa-servicestack">&nbsp;</i>services</a>
+        <a ><i class="fa-solid fa-thumbs-up">&nbsp;</i>review</a>
+        <a href="enquiry#enquiry"><i class="fa-solid fa-envelope">&nbsp;</i>enquiry</a>
+    </nav>
+
+</header>
+
+<section class="review">
+    <section>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10 col-xl-8 text-center">
+                <h3 class="mb-4">Testimonials</h3>
+                <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+                    numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+                    quisquam eum porro a pariatur veniam.
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-4 mb-5 mb-md-0">
+                <div class="d-flex justify-content-center mb-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                         class="rounded-circle shadow-1-strong" width="150" height="150" />
+                </div>
+                <h5 class="mb-3">Maria Smantha</h5>
+                <h6 class="text-primary mb-3">Web Developer</h6>
+                <p class="px-xl-3">
+                    <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
+                    tenetur.
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center mb-0">
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-5 mb-md-0">
+                <div class="d-flex justify-content-center mb-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                         class="rounded-circle shadow-1-strong" width="150" height="150" />
+                </div>
+                <h5 class="mb-3">Lisa Cudrow</h5>
+                <h6 class="text-primary mb-3">Graphic Designer</h6>
+                <p class="px-xl-3">
+                    <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
+                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center mb-0">
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-0">
+                <div class="d-flex justify-content-center mb-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                         class="rounded-circle shadow-1-strong" width="150" height="150" />
+                </div>
+                <h5 class="mb-3">John Smith</h5>
+                <h6 class="text-primary mb-3">Marketing Specialist</h6>
+                <p class="px-xl-3">
+                    <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
+                    dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center mb-0">
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="far fa-star fa-sm text-warning"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- footer start -->
+<footer>
+<section class="footer">
+
+    <div class="box-container">
+        <div class="box">
+            <h3>about us</h3>
+            <p>Welcome to CabEase, your reliable and trusted transportation solution.
+                At CabEase, we understand the importance of a comfortable and hassle-free journey.
+                Whether you need a ride to the airport, a business meeting, or a night out on the town.
+                Our team of skilled drivers undergoes rigorous training and
+                possesses extensive knowledge of the local area, ensuring that you reach your destination efficiently.
+                We prioritize punctuality and are dedicated to getting you to your desired location on time.
+                Customer satisfaction is at the core of our business.
+                You can book a taxi through our user-friendly website or give us a call.
+                We offer competitive rates and transparent pricing.Thank you for considering CabEase
+                for your transportation needs.
+
+            </p>
+
+        </div>
+
+        <!-- <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">chakki,dalhousie road.</a>
+            <a href="#">mamoon,pathankot.</a>
+        </div> -->
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#book">book</a>
+            <a href="#packages">packages</a>
+            <a href="#services">services</a>
+            <a href="#review">review</a>
+            <a href="#enquiry">enquiry</a>
+        </div>
+
+
+        <div class="box">
+            <h3>follow us </h3>
+            <a href="#home">facebook</a>
+            <a href="#book">Instagram</a>
+            <a href="#packages">linkedin</a>
+        </div>
+
+        <div class="box">
+            <h3>Contact us</h3>
+            <a href="">98159-13817</a>
+            <a href="">85578-91773</a>
+            <a href="">78377-83495</a>
+            <a href="">Khushaldadwal73@gmail.com</a>
+        </div>
+
+    </div>
+
+
+
+    <h1 class="credit">&#169; 2023 <span>CabEase </span>All rights reserved! <br>
+        Developed by <span>khushal dadwal </span>
+    </h1>
+
+</section>
+</footer>
+</body>

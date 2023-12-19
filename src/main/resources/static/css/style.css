@@ -326,7 +326,9 @@ header .navbar a:hover{
 body{
     height: 300rem;
 }
-
+footer{
+ margin-top:auto;
+ }
 /* media queries */
 
 @media(max-width:1200px){

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="apple-touch-icon" href="../static/images/dot.png" type="image/x-icon">
+    <title>
+       CabEase
+    </title>
+    <link rel="stylesheet" href="../css/style.css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+</head>
+<body>
+                        <!-- header section starts -->
+<header>
+
+ 
+    <a class="logo"><span>C</span>AB<span>E</span>ase</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a th:href="@{/review}">review</a>
+        <a href="#enquiry">enquiry</a>
+    </nav>
+   
+</header>
+                       <!-- header section ends  -->
+
+                       <!-- home section starts -->
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Travel is the ultimate inspiration.</h3>
+        <p>book CabEase-best cab to travel new places with us</p>
+        <a href="#book" class="btn">Book now</a>
+                    </div>
+    </div>
+
+
+   
+</section>
+                       <!-- home section ends -->
+<!-- book section starts -->
+<section class="book" id="book">
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w </span>
+    </h1>
+   
+    <div class="row">
+        <div class="image">
+            <img src="../static/images/picktime.svg" alt="">
+        </div>
+
+        <form action="" id="bookform">
+            <div class="inputBox">
+                <h3>Name</h3>
+                <input type="text" placeholder="your name" >
+            </div>
+            <div class="inputBox">
+                <h3>Contact no.</h3>
+                <input type="text" placeholder="your mobile no" >
+            </div>
+            <div class="inputBox">
+                <h3>E-mail</h3>
+                <input type="text" placeholder="your e-mail" >
+            </div>
+            <div class="inputBox">
+                <h3>Tour itinerary</h3>
+                <textarea placeholder="write your tour itinerary here, must add your pickup address" ></textarea>
+            </div>
+            <div class="inputBox">
+                <h3>how many</h3>
+                <input type="number" placeholder="number of guests" >
+            </div>
+            <div class="inputBox">
+                <h3>arrivals</h3>
+                <input type="date" >
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input type="date" >
+            </div>
+            <input type="submit" class="btn" value="book now ">
+        </form>
+    </div>
+</section>
+ <!-- book section ends -->
+
+ <!-- package section starts -->
+
+ <section class="packages" id="packages">
+    <h1 class="heading">
+        <span>p</span>
+        <span>o</span>
+        <span>p</span>
+        <span>u</span>
+        <span>l</span>
+        <span>a</span>
+        <span>r</span>
+        <span class="space"></span>
+
+        <span>d</span>
+        <span>e</span>
+        <span>s</span>
+        <span>t</span>
+        <span>i</span>
+        <span>n</span>
+        <span>a</span>
+        <span>t</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+        <span>s</span>
+        
+
+    </h1>
+           
+    <div class="images">
+        <div class="box-container" >
+            <div class="box" style="background-image: url(images/dal-lake.jpeg);">
+            
+                </div>
+    
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Dal lake</h2>
+                    <p>Dal lake is lake in shrinagar and second largest lake in jammu and kashmir</p>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box-container" >
+            <div class="box" style="background-image: url(images/garez.jpeg);">
+            </div>
+                <div class="content">
+                    <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Gurez Valley</h2>
+                    <p>Gurez, is a valley located in the high himalyas about 123 km from shrinagar </p>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    
+                    <a href="#book" class="btn">book now</a>
+                </div>
+        </div>
+          
+        
+      
+        
+        <div class="box-container" >
+          <div class="box" style="background-image: url(images/leh.jpeg)">
+            </div>
+            <div class="content">
+                <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Leh</h2>
+                <p>Leh is a city in India-administered ladakh in the disputed kashmir region. </p>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+               
+                <a href="#book" class="btn">book now</a>
+            </div>
+       
+        </div>
+        
+           
+        <div class="box-container" >
+         <div class="box" style="background-image: url(images/manali1.jpeg)">
+            </div>
+            <div class="content">
+                <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Manali</h2>
+                <p>Manali is a high-altitude himalyan town in India's northest himachal pradesh state. </p>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+               
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+            
+       <div class="box-container" >
+        <div class="box" style="background-image: url(images/khajjjiar.jpeg)">
+        </div>
+            <div class="content">
+                <h2><i class="fas fa-map-marker-alt">&nbsp;</i>Khajjiar</h2>
+                <p>The Khajjiar is surrounded by cedar forest.West,kalatop Wildlife Sanctuary.  </p>
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+               
+                <a href="#book" class="btn">book now</a>
+            </div>
+       </div>
+       
+    <div class="box-container" >
+       <div class="box" style="background-image: url(images/meclo.jpeg)">
+       </div> 
+        <div class="content">
+        <h2><i class="fas fa-map-marker-alt">&nbsp;</i>McLeod Ganj</h2>
+        <p>McLeod Ganj is a suburb of Dharmshala(himachal pradesh).bhagsuNag waterfall is situated in Mcleodganj.</p>
+        <div class="starts" >
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+       
+        <a href="#book" class="btn">book now</a>
+    </div>
+    
+    </div>
+    
+
+    </div>
+
+   
+
+ </section>
+<!-- packages section ends -->
+
+
+<!-- services section starts  -->
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    
+    </h1>
+
+
+    <div class="box-container">
+        <div class="box">
+            <i class="fa-solid fa-clock"></i>
+            <h3>24/7 Availability</h3>
+            <p> CabEase operate round the clock,
+                 offering 24/7 availability to meet the transportation needs of customers at any time of the day or night.</p>
+        </div>
+        
+
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>Airport transfers</h3>
+            <p>CabEase specialize in airport transfers, providing transportation to and from airports. 
+                we ensure timely pickup and drop-off, helping travelers reach their flights or their destinations after arrival.</p>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-route"></i>
+            <h3>Long-Distance Travel</h3>
+            <p>CabEase also provide long-distance travel services. We offer transportation for intercity or 
+                interstate journeys, allowing passengers to travel comfortably and conveniently to their desired destinations.</p>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Online and Mobile Booking</h3>
+            <p>To enhance convenience, we often provide online and mobile booking platforms. 
+                Customers can book taxis through our website or mobile apps, allowing them to schedule rides, 
+                track their taxis, and make payments easily.</p>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-person"></i>
+            <h3>Experienced and Professional Drivers</h3>
+            <p>CabEase employ experienced and professional drivers who are knowledgeable about local routes and traffic conditions.
+                 They prioritize passenger safety, comfort, and providing a pleasant travel experience.</p>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-calendar"></i>
+            <h3>Special Occasions and Events</h3>
+            <p>CabEase tailored for special occasions and events. we can provide transportation for weddings,
+                proms, parties, and other celebrations, ensuring safe and reliable travel for attendees.</p>
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+<!-- services section ends -->
+
+   
+
+        <!-- enquiry section starts -->
+                        <section class="enquiry" id="enquiry">
+
+                            <h1 class="heading">
+                                <span>e</span>
+                                <span>n</span>
+                                <span>q</span>
+                                <span>u</span>
+                                <span>i</span>
+                                <span>r</span>
+                                <span>y</span>
+                            </h1>
+
+                            <!--            <div class = "row">-->
+                            <!--                <div class = "col-lg-3">-->
+                            <!--                    <a th:href = "@{/enquiry/new}" class = "btn btn-primary btn-sm mb-3"> Book Now</a>-->
+                            <!--                </div>-->
+                            <!--            </div>-->
+
+                            <form th:action="@{/enquiry}" th:object="${enquiry}" method="POST" modelAttribute="enquiry">
+
+                                <div class="inputbox">
+                                    <input type="text"
+                                           placeholder="name"
+                                           name="name"
+                                           th:field = "*{name}">
+                                    <input type="text"
+                                           placeholder="Email"
+                                           name="Email"
+                                           th:field = "*{Email}">
+                                </div>
+                                <div class="inputbox">
+                                    <input type="number"
+                                           placeholder="how_many"
+                                           name="how_many"
+                                           th:field = "*{how_many}">
+
+                                    <input type="text"
+                                           placeholder="Subject"
+                                           name="Subject"
+                                           th:field = "*{Subject}">
+                                </div>
+
+                                <textarea
+                                        placeholder="message"
+                                        name=""
+                                        id=""
+                                        cols="30" rows="10"
+                                        th:field="*{Message}">
+
+            </textarea>
+                                <input type="submit" class="btn" value="send message" style="background-color: var(--orange);">
+
+
+                            </form>
+
+                        </section>
+
+ <!-- enquiry section ends -->
+
+
+
+ <!-- footer start -->
+
+    <section class="footer">
+
+        <div class="box-container">
+            <div class="box">
+                <h3>about us</h3>
+            <p>Welcome to CabEase, your reliable and trusted transportation solution. 
+                At CabEase, we understand the importance of a comfortable and hassle-free journey.
+                Whether you need a ride to the airport, a business meeting, or a night out on the town.
+                Our team of skilled drivers undergoes rigorous training and 
+                possesses extensive knowledge of the local area, ensuring that you reach your destination efficiently. 
+                We prioritize punctuality and are dedicated to getting you to your desired location on time.
+                Customer satisfaction is at the core of our business.
+                You can book a taxi through our user-friendly website or give us a call. 
+                We offer competitive rates and transparent pricing.Thank you for considering CabEase 
+                for your transportation needs.
+                  
+                </p>
+              
+            </div>
+
+            <!-- <div class="box">
+                <h3>branch locations</h3>
+                <a href="#">chakki,dalhousie road.</a>
+                <a href="#">mamoon,pathankot.</a>
+            </div> -->
+            
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="#book">book</a>
+                <a href="#packages">packages</a>
+                <a href="#services">services</a>
+                <a href="#review">review</a>
+                <a href="#enquiry">enquiry</a>
+            </div>
+
+             
+            <div class="box">
+                <h3>follow us </h3>
+                <a href="#home">facebook</a>
+                <a href="#book">Instagram</a>
+                <a href="#packages">linkedin</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact us</h3>
+                <a href="">98159-13817</a>
+                <a href="">85578-91773</a>
+                <a href="">78377-83495</a>
+                <a href="">Khushaldadwal73@gmail.com</a>
+            </div>
+
+        </div> 
+
+        
+
+        <h1 class="credit">&#169; 2023 <span>CabEase </span>All rights reserved! <br>
+            Developed by <span>khushal dadwal </span>
+        </h1>
+        
+    </section>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+                       <script src="../static/script.js"></script>
+</body>
+</html>
