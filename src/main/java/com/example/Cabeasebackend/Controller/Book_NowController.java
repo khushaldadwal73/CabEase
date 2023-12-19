@@ -4,6 +4,7 @@ import com.example.Cabeasebackend.Entity.Book_Now;
 import com.example.Cabeasebackend.Entity.EnquiryForm;
 import com.example.Cabeasebackend.Service.Book_NowService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,17 +17,17 @@ public class Book_NowController {
     @Autowired
     private Book_NowService bookNowService;
 
-    @GetMapping("/getbooking")
-    public String getIndex(Model model ){
+    @GetMapping("/book")
+    public String getIndex1(Model model){
         model.addAttribute("booking",new Book_Now());
-        return "index";
+        return "booking";
     }
 
-    @PostMapping("/postbooking")
-    public String NewBooking(@ModelAttribute("booking") Book_Now bookNow){
+    @PostMapping("/book")
+    public String booking(@ModelAttribute("booking") Book_Now bookNow){
 
         bookNowService.PostBooking(bookNow);
-        return "redirect:/";
+        return "redirect:/book";
     }
 
 }
