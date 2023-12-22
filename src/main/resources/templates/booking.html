@@ -65,7 +65,7 @@
             <img src="../static/images/picktime.svg" alt="">
         </div>
 
-        <form th:action="@{/postbooking}" th:object="${booking}" method="POST" modelAttribute="booking">
+        <form th:action="@{/book}" th:object="${booking}" method="POST" modelAttribute="booking">
             <div class="inputBox">
                 <h3>Name</h3>
                 <input type="text" placeholder="your name" name="name" th:field = "*{name}">
