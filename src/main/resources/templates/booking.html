@@ -22,12 +22,12 @@
     <a class="logo"><span>C</span>AB<span>E</span>ase</a>
 
     <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#book">book</a>
-        <a href="#packages">packages</a>
-        <a href="#services">services</a>
-        <a th:href="@{/review}">review</a>
-        <a href="#enquiry">enquiry</a>
+        <a href="#home"><i class="fa-solid fa-house">&nbsp;</i>home</a>
+        <a href="#book"><i class="fa-solid fa-book">&nbsp;</i>book</a>
+        <a href="#packages"><i class="fa-solid fa-cube">&nbsp;</i>packages</a>
+        <a href="#services"><i class="fa-brands fa-servicestack">&nbsp;</i>services</a>
+        <a th:href="@{/review}"><i class="fa-solid fa-thumbs-up">&nbsp;</i>review</a>
+        <a href="#enquiry"><i class="fa-solid fa-envelope">&nbsp;</i>enquiry</a>
     </nav>
    
 </header>
@@ -62,40 +62,50 @@
    
     <div class="row">
         <div class="image">
-            <img src="../static/images/picktime.svg" alt="">
+            <img src="../images/picktime.svg" alt="">
         </div>
 
         <form th:action="@{/book}" th:object="${booking}" method="POST" modelAttribute="booking">
             <div class="inputBox">
                 <h3>Name</h3>
-                <input type="text" placeholder="your name" name="name" th:field = "*{name}">
+                <input type="text" placeholder="your name" name="name" pattern="[A-Za-z -]+" th:field = "*{name}" required>
             </div>
             <div class="inputBox">
-                <h3>Contact no.</h3>
-                <input type="text" placeholder="your mobile no" th:field = "*{Contact_no}">
+                <h3>Contact no. (XXX-XXX-XXXX)</h3>
+                <input type="text" placeholder="your mobile no" pattern="\d{3}-\d{3}-\d{4}" th:field = "*{Contact_no}" required>
             </div>
             <div class="inputBox">
                 <h3>E-mail</h3>
-                <input type="text" placeholder="your e-mail" th:field = "*{Email}">
+                <input type="text" placeholder="your e-mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" th:field = "*{Email}" required>
             </div>
             <div class="inputBox">
                 <h3>Tour itinerary</h3>
 <!--                <textarea placeholder="write your tour itinerary here, must add your pickup address" ></textarea>-->
-                <input type="text" placeholder="write your tour itinerary here, must add your pickup address" th:field = "*{tour_iternary}">
+                <input type="text" placeholder="write your tour itinerary here, must add your pickup address" th:field = "*{tour_iternary}" required>
             </div>
             <div class="inputBox">
                 <h3>how many</h3>
-                <input type="number" placeholder="number of guests" th:field = "*{How_many}">
+                <input type="number" placeholder="number of guests" th:field = "*{How_many}" required>
             </div>
             <div class="inputBox">
                 <h3>arrivals</h3>
-                <input type="date" th:field = "*{Arrivals}">
+                <input type="date" id="ArrivalDate" min="{{TODAY}}" th:field = "*{Arrivals}" required>
+
             </div>
             <div class="inputBox">
                 <h3>leaving</h3>
-                <input type="date" th:field = "*{Leaving}">
+                <input type="date" id="leavingDate" min="{{TODAY}}" th:field = "*{Leaving}" required>
+
+                <script>
+                    // Get the current date in the "YYYY-MM-DD" format
+                    var today = new Date().toISOString().split('T')[0];
+
+                    // Set the minimum date dynamically
+                    document.getElementById('ArrivalDate').min = today;
+                    document.getElementById('leavingDate').min = today;
+                </script>
             </div>
-            <input type="submit" class="btn" value="book now ">
+            <input type="submit" class="btn" value="book now " required>
         </form>
     </div>
 </section>
@@ -350,27 +360,31 @@
 <!--                    <a th:href = "@{/enquiry/new}" class = "btn btn-primary btn-sm mb-3"> Book Now</a>-->
 <!--                </div>-->
 <!--            </div>-->
-           
-       <form action="" id="enquiry_page">
+
+            <section class="enquiry" >
 
         <div class="inputbox">
             <input type="text"
                    placeholder="name"
-                   name="name">
+                   name="name"
+                  >
             <input type="text"
                    placeholder="Email"
                    name="Email"
+
                >
         </div>
         <div class="inputbox">
             <input type="number"
                    placeholder="how_many"
                    name="how_many"
+
                    >
 
             <input type="text"
                    placeholder="Subject"
                    name="Subject"
+
                   >
         </div>
 
@@ -379,6 +393,7 @@
                     name=""
                     id=""
                     cols="30" rows="10"
+
                     >
 
             </textarea>

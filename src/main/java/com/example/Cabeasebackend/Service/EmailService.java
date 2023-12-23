@@ -20,12 +20,12 @@ public class EmailService {
     @Autowired
     private SpringTemplateEngine templateEngine;
 
-    public void sendEmail(String to, String subject, String templateName, Context context) throws MessagingException {
+    public void sendEmail(String from,String to, String subject, String templateName, Context context) throws MessagingException {
         MimeMessage message = emailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
         String html = templateEngine.process(templateName, context);
-
+        helper.addCc(from);
         helper.setTo(to);
         helper.setSubject(subject);
         helper.setText(html, true);

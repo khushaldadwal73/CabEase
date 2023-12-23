@@ -44,7 +44,7 @@ public class EnquiryFormController {
             Context context = new Context();
             context.setVariable("enquiry", enquiryForm);
 
-            emailService.sendEmail("akhil.sharma0612@gmail.com", "New Enquiry " + LocalDate.now(), "email-template", context);
+            emailService.sendEmail("khushaldadwal73@gmail.com",enquiryForm.getEmail(), "New Enquiry " + LocalDate.now(), "email-template", context);
         } catch (MessagingException e) {
             e.printStackTrace(); // Handle exception appropriately
         }

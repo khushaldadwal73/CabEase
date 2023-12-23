@@ -38,7 +38,7 @@ public class Book_NowController {
             Context context = new Context();
             context.setVariable("booking", bookNow);
 
-            emailService.sendEmail("akhil.sharma0612@gmail.com", "New Booking" + LocalDate.now(),"email-template", context);
+            emailService.sendEmail("khushaldadwal73@gmail.com",bookNow.getEmail(), "New Booking" + LocalDate.now(),"email-template", context);
         } catch (MessagingException e) {
             e.printStackTrace(); // Handle exception appropriately
         }

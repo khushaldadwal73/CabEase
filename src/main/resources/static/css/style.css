@@ -329,6 +329,11 @@ body{
 footer{
  margin-top:auto;
  }
+
+.reviews{
+   display:flex;
+   flex-wrap:wrap;
+ }
 /* media queries */
 
 @media(max-width:1200px){
