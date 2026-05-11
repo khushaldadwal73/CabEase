@@ -1,21 +1,14 @@
 package com.example.Cabeasebackend.Controller;
 
-import com.example.Cabeasebackend.Entity.Book_Now;
 import com.example.Cabeasebackend.Entity.EnquiryForm;
-import com.example.Cabeasebackend.Service.Book_NowService;
 import com.example.Cabeasebackend.Service.EnquiryFormService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
-import java.util.Timer;
-import java.util.TimerTask;
-
-
+@CrossOrigin(origins = "http://localhost:3000")
 @Controller
 public class EnquiryFormController {
 
@@ -29,10 +22,9 @@ public class EnquiryFormController {
     }
 
     @PostMapping("/enquiry")
-    public String newEnquiry(@ModelAttribute("enquiry") EnquiryForm enquiryForm)
-    {
+    public ResponseEntity<String> newEnquiry(@RequestBody EnquiryForm enquiryForm) {
         enquiryFormService.postEnquiry(enquiryForm);
-        return "redirect:/enquiry";
+        return ResponseEntity.ok("Enquiry submitted successfully");
     }
 
 }

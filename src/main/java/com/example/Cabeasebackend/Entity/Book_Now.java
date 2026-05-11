@@ -1,24 +1,50 @@
 package com.example.Cabeasebackend.Entity;
 
+
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="book_now")
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+@Document(collection = "book_now")
 @Data
 public class Book_Now {
+
+    @Id
+    private String id;
+
+    @NotBlank(message = "Name is required")
+    @Size(min = 2, max = 50,
+            message = "Name must be between 2 and 50 characters")
     private String name;
 
-    private String Contact_no;
+    @NotBlank(message = "Phone number is required")
+    @Pattern(
+            regexp = "^[0-9]{10}$",
+            message = "Phone number must be exactly 10 digits"
+    )
+    private String phone;
 
-    private String Email;
+    @NotBlank(message = "Pickup location is required")
+    @Size(min = 2, max = 100,
+            message = "Pickup location is invalid")
+    private String from;
 
-    private String tour_iternary;
+    @NotBlank(message = "Destination is required")
+    @Size(min = 2, max = 100,
+            message = "Destination is invalid")
+    private String to;
 
-    private int How_many;
+    @NotBlank(message = "Date is required")
+    private String date;
 
-    private String Arrivals;
+    @NotBlank(message = "Vehicle selection is required")
+    private String vehicle;
 
-    private String Leaving;
-
+    @Size(max = 500,
+            message = "Note cannot exceed 500 characters")
+    private String note;
 }

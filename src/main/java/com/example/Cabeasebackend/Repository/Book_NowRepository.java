@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface  Book_NowRepository extends MongoRepository<Book_Now,Long> {
+    Book_Now findTopByOrderByIdDesc();
 }

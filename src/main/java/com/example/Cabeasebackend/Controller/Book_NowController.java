@@ -5,12 +5,12 @@ import com.example.Cabeasebackend.Entity.EnquiryForm;
 import com.example.Cabeasebackend.Service.Book_NowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @Controller
 public class Book_NowController {
 
@@ -24,10 +24,9 @@ public class Book_NowController {
     }
 
     @PostMapping("/book")
-    public String booking(@ModelAttribute("booking") Book_Now bookNow){
-
+    public ResponseEntity<String> booking(@RequestBody Book_Now bookNow){
         bookNowService.PostBooking(bookNow);
-        return "redirect:/book";
+        return ResponseEntity.ok("Booking Created successfully");
     }
 
 }
