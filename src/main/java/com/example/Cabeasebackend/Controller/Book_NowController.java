@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:3000")
-@Controller
+@CrossOrigin(origins = "*")
+@RestController
 public class Book_NowController {
 
     @Autowired

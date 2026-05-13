@@ -8,12 +8,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:3000")
-@Controller
+@CrossOrigin(origins = "*")
+@RestController
 public class EnquiryFormController {
 
     @Autowired
     private EnquiryFormService enquiryFormService;
+
+    @GetMapping("/")
+    public String home() {
+        return "Backend Running Successfully";
+    }
 
     @GetMapping("/enquiry")
     public String getIndex(Model model){
