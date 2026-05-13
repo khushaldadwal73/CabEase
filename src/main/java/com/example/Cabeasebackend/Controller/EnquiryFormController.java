@@ -20,12 +20,6 @@ public class EnquiryFormController {
         return "Backend Running Successfully";
     }
 
-    @GetMapping("/enquiry")
-    public String getIndex(Model model){
-        model.addAttribute("enquiry",new EnquiryForm());
-        return "enquiry";
-    }
-
     @PostMapping("/enquiry")
     public ResponseEntity<String> newEnquiry(@RequestBody EnquiryForm enquiryForm) {
         enquiryFormService.postEnquiry(enquiryForm);

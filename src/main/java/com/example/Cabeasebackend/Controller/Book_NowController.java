@@ -17,11 +17,6 @@ public class Book_NowController {
     @Autowired
     private Book_NowService bookNowService;
 
-    @GetMapping("/book")
-    public String getIndex1(Model model){
-        model.addAttribute("booking",new Book_Now());
-        return "booking";
-    }
 
     @PostMapping("/book")
     public ResponseEntity<String> booking(@RequestBody Book_Now bookNow){
