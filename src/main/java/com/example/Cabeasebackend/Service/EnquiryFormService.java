@@ -3,7 +3,10 @@ package com.example.Cabeasebackend.Service;
 import com.example.Cabeasebackend.Entity.EnquiryForm;
 import com.example.Cabeasebackend.Repository.EnquiryFormRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EnquiryFormService {
@@ -35,5 +38,9 @@ public class EnquiryFormService {
         enquiryForm.setId(newId);
 
         return enquiryFormRepository.save(enquiryForm);
+    }
+
+    public List<EnquiryForm> getAllEnquiries() {
+        return enquiryFormRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
     }
 }

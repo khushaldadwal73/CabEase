@@ -1,6 +1,5 @@
 package com.example.Cabeasebackend.Entity;
 
-import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,7 +8,6 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Document(collection = "enquiry")
-@Data
 public class EnquiryForm {
 
     @Id
@@ -37,4 +35,36 @@ public class EnquiryForm {
             message = "Enquiry must be between 5 and 500 characters"
     )
     private String enquiry;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEnquiry() {
+        return enquiry;
+    }
+
+    public void setEnquiry(String enquiry) {
+        this.enquiry = enquiry;
+    }
 }

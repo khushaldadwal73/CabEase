@@ -3,7 +3,10 @@ package com.example.Cabeasebackend.Service;
 import com.example.Cabeasebackend.Entity.Book_Now;
 import com.example.Cabeasebackend.Repository.Book_NowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class Book_NowService {
@@ -36,5 +39,9 @@ public class Book_NowService {
         bookNow.setId(newId);
 
         return bookNowRepository.save(bookNow);
+    }
+
+    public List<Book_Now> getAllBookings() {
+        return bookNowRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
     }
 }

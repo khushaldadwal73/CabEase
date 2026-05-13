@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface EnquiryFormRepository extends MongoRepository<EnquiryForm,Long> {
+public interface EnquiryFormRepository extends MongoRepository<EnquiryForm, String> {
 
     EnquiryForm findTopByOrderByIdDesc();
 }
